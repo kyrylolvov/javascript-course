@@ -49,4 +49,47 @@ else {
     century = 21;
 }
 
+// type conversion
 console.log(century);
+
+const inputYear = `1991`;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 10);
+console.log(String(23), 23);
+
+// type coercion
+console.log(`I'm ` + 18 + ` years old.`)
+console.log(`23` - `10` - 3);
+console.log(`23` / `2`);
+console.log(`23` > `18`);
+
+let n = `1` + 1;
+console.log(n - 1);
+
+const money = 100;
+if (money) {
+    console.log(`Don't spend it all!`);
+}
+else {
+    console.log(`You should get a job!`);
+}
+
+let height = 10;
+if (height) {
+    console.log(`Height is defined! 🤩`);
+}
+else {
+    console.log(`Height is undefined 😓`)
+}
+
+const myAge = 18;
+if (age === 18) console.log(`You just became and adult`);
+else console.log(`You are not 18 yet!`);
+
+const favourite = prompt(`What's your favourite number?`);
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite == 23) {
+    console.log(`Cool! 23 is an amazing number.`);
+} 
