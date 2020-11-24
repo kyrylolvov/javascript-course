@@ -93,3 +93,20 @@ console.log(typeof favourite);
 if (favourite == 23) {
     console.log(`Cool! 23 is an amazing number.`);
 } 
+
+const scoreDolphins = (97 + 112 + 81) / 3;
+const scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log(`Dolphis win the trophy 🏆`)
+}
+else if (scoreDolphins < scoreKoalas && scoreKoalas >= 100) {
+    console.log(`Koalas win the trophy 🏆`)
+}
+else if (scoreKoalas === scoreDolphins && scoreKoalas >= 100 && scoreDolphins >= 100) {
+    console.log(`Both teams win the trophy 🤩`)
+}
+else {
+    console.log(`No one wins the trophy 😓`)
+}
