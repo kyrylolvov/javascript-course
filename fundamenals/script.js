@@ -34,7 +34,7 @@ const calcAgeNew = function (birthYear) {
 }
 console.log(calcAgeNew(2002));
 
-*/
+
 
 function cutFruitPiecees(fruit) {
     return fruit * 4;
@@ -49,3 +49,23 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2, 3));
+*/
+const calcAge = function (birthYear) {
+    return 2020 - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    const message = `You have already retired`;
+
+    if (retirement > 0) {
+        console.log(`${firstName} will retire in ${retirement} years.`)
+    }
+    else {
+        console.log(`${firstName} has already retired ${-retirement} years ago.`)
+    }
+}
+
+yearsUntilRetirement(2002, `Matthew`);
+yearsUntilRetirement(1950, `John`);
