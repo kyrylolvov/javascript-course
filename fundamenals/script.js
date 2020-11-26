@@ -1,6 +1,6 @@
 `use strict`;
 
-let hasDriversLicense = false;
+/* let hasDriversLicense = false;
 const passTest = true;
 
 if (passTest) hasDriversLicense = true;
@@ -33,3 +33,19 @@ const calcAgeNew = function (birthYear) {
     return 2020 - birthYear;
 }
 console.log(calcAgeNew(2002));
+
+*/
+
+function cutFruitPiecees(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPiecees(apples);
+    const orangePieces = cutFruitPiecees(oranges);
+
+    const juice = `Juice with ${applePieces} pices of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
