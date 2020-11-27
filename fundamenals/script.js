@@ -1,4 +1,4 @@
-`use strict`;
+"use strict";
 
 /* let hasDriversLicense = false;
 const passTest = true;
@@ -35,10 +35,11 @@ const calcAgeNew = function (birthYear) {
 console.log(calcAgeNew(2002));
 
 
-
 function cutFruitPiecees(fruit) {
     return fruit * 4;
 }
+
+
 
 function fruitProcessor(apples, oranges) {
     const applePieces = cutFruitPiecees(apples);
@@ -70,6 +71,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 yearsUntilRetirement(2002, `Matthew`);
 yearsUntilRetirement(1950, `John`);
 
+
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const avgDolphins = calcAverage(404, 23, 71);
@@ -88,5 +90,63 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 
 checkWinner(avgDolphins, avgKoalas);
+
+
+const calcAge = function (birthYear) {
+    console.log(2020 - birthYear);
+}
+const years = [1990, 1967, 2002, 2010, 2019];
+
+for (let n = 0; n < 6; n++) {
+    calcAge(years[n]);
+}
+
+
+const friends = [`Michael`, `Jordan`, `Matthew`];
+console.log(friends);
+
+friends.push(`Jay`);
+console.log(friends);
+
+friends.unshift(`Steve`);
+console.log(friends);
+
+friends.pop();
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf(`Matthew`));
+
+console.log(friends.includes(`Matthew`))
+
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.3;
+}
+
+const bills = [125, 555, 44];
+console.log(bills)
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips)
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(total)
 */
+
+const jonaArray = [
+    `Kyrylo`,
+    `Lvov`,
+    2020 - 2002,
+    `Developer`
+];
+
+const kyrylo = {
+    firstName: `Kyrylo`,
+    lastName: `Lvov`,
+    age: 2020 - 2002,
+    job: `Developer`
+};
+
 
