@@ -69,7 +69,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 yearsUntilRetirement(2002, `Matthew`);
 yearsUntilRetirement(1950, `John`);
-*/ 
+
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const avgDolphins = calcAverage(404, 23, 71);
@@ -88,4 +88,5 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 
 checkWinner(avgDolphins, avgKoalas);
+*/
 
