@@ -1,6 +1,6 @@
 "use strict";
 
-let hasDriversLicense = false;
+/* let hasDriversLicense = false;
 const passTest = true;
 
 if (passTest) hasDriversLicense = true;
@@ -141,7 +141,7 @@ const jonaArray = [
     2020 - 2002,
     `Developer`
 ];
-*/
+
 const kyrylo = {
     firstName: `Kyrylo`,
     lastName: `Lvov`,
@@ -152,8 +152,120 @@ const kyrylo = {
     calcAge: function () {
         this.age = 2020 - this.birthYear;
         return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDrivingLicense ? 'a' : 'no'} driver's license.`
     }
+
+
 };
 
+console.log(kyrylo.calcAge());
 console.log(kyrylo.age);
 
+console.log(kyrylo.getSummary());
+
+const mark = {
+    firstName: `Mark`,
+    lastName: `Miller`,
+    height: 1.69,
+    weight: 78,
+
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        this.bmiRounded = Math.round(this.bmi * 10) / 10;
+        return this.bmiRounded;
+    }
+}
+
+const john = {
+    firstName: `John`,
+    lastName: `Smith`,
+    height: 1.95,
+    weight: 92,
+
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        this.bmiRounded = Math.round(this.bmi * 10) / 10;
+        return this.bmiRounded;
+    }
+}
+
+console.log(`${john.firstName} ${john.lastName}'s BMI (${john.calcBMI()}) is ${john.calcBMI() > mark.calcBMI() ? 'higher' : 'lower'} than ${mark.firstName} ${mark.lastName}'s (${mark.calcBMI()})`);
+
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repition ${rep} 🏋️‍♀️`)
+}
+
+
+const kyryloArray = [
+    `Kyrylo`,
+    `Lvov`,
+    2020 - 2002,
+    `Developer`
+];
+
+const types = [];
+
+for (let i = 0; i < kyryloArray.length; i++) {
+    console.log(kyryloArray[i], typeof kyryloArray[i]);
+
+    // types[i] = typeof kyryloArray[i];
+    types.push(typeof kyryloArray[i]);
+}
+
+console.log(types)
+
+const years = [1991, 2002, 2007, 1969, 1978];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages[i] = 2020 - years[i];
+}
+
+console.log(ages);
+
+for (let i = 0; i < kyryloArray.length; i++) {
+    if (typeof )
+}
+
+
+
+const kyrylo = [
+    `Kyrylo`,
+    `Lvov`,
+    `developer`,
+    2020 - 2002
+]
+
+for (let i = kyrylo.length - 1; i >= 0; i--) {
+    console.log(i, kyrylo[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`--- Starting exercise ${exercise} ---`);
+    for (let repetition = 1; repetition <= 5; repetition++) {
+        console.log(`Lifting weights repition ${repetition} 🏋️‍♀️`)
+    }
+}
+
+
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repition ${rep} 🏋️‍♀️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
+
+console.log(`You rolled a ${dice}`);
+
+*/
