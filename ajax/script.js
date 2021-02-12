@@ -20,7 +20,16 @@ const renderCountry = function (data, className = '') {
   </div>
 </article>`;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
+  // countriesContainer.style.opacity = 1;
+};
+
+btn.addEventListener('click', function () {
+  getCountryData('canada');
+});
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  // countriesContainer.style.opacity = 1;
 };
 /*
 const getCountryAndNeighbour = function (country) {
@@ -49,9 +58,26 @@ const getCountryAndNeighbour = function (country) {
 getCountryAndNeighbour('canada');
 
 */
+
 const getCountryData = function (country) {
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+
+      const neighbour = data[0].borders[0];
+      if (!neighbour) return;
+
+      // Country neighbour
+      return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'))
+    .catch(err => {
+      console.log(`${err} ⛔`);
+      renderError(`Something went wrong ${err.message}`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
 };
-getCountryData('portugal');
